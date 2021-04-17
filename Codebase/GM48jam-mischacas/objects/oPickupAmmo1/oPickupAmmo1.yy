@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCoin",
-    "path": "sprites/sCoin/sCoin.yy",
+    "name": "sAmmo1",
+    "path": "sprites/sAmmo1/sAmmo1.yy",
   },
   "solid": false,
   "visible": true,
@@ -34,7 +34,7 @@
     "path": "folders/Objects/Environment+Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCoin",
+  "name": "oPickupAmmo1",
   "tags": [],
   "resourceType": "GMObject",
 }

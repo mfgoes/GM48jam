@@ -10,3 +10,5 @@ script_execute(state);
 PlayerCollision();
 
 PlayerDebugControls(); 
+
+PlayerShoot();

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "ctrl_system",
+    "path": "sprites/ctrl_system/ctrl_system.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -25,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Setup + Camera",
+    "path": "folders/Objects/Setup + Camera.yy",
   },
   "resourceVersion": "1.0",
   "name": "oGame",

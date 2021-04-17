@@ -3,6 +3,14 @@
 	hsp = 0;
 	vsp = 0;
 	current_walkspd = 0;
+	
+	//player stats
+	hp = 1;
+	shields = 0; //ignore this for now
+	upgrades = 0;
+	ammo_type1 = 10;
+	ammo_type2 = 5;
+	
 	walkspd = 3;
 	hascontrol = true;
 	

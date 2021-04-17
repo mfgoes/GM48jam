@@ -17,3 +17,4 @@ walkspd = 2;
 dmg_amount = 3;
 
 //set boss phases here
+summoned = 0; 
