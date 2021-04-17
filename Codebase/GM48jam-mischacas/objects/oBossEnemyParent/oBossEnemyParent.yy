@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "sCoin",
-    "path": "sprites/sCoin/sCoin.yy",
+    "name": "sBoss1Idle",
+    "path": "sprites/sBoss1Idle/sBoss1Idle.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oPickupParent",
-    "path": "objects/oPickupParent/oPickupParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -30,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment+Objects",
-    "path": "folders/Objects/Environment+Objects.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCoin",
+  "name": "oBossEnemyParent",
   "tags": [],
   "resourceType": "GMObject",
 }

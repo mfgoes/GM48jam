@@ -15,5 +15,8 @@ function PlayerInput(){
 		key_primary = mouse_check_button(mb_left)		|| gamepad_button_check(0,gp_shoulderr);	//Melee attack
 		key_secondary = mouse_check_button(mb_right)	|| gamepad_button_check(0,gp_shoulderr);	//Melee attack
 		key_roll =  keyboard_check_pressed(ord("F"))	|| gamepad_button_check(0,gp_face2);		//Evade
+	
+		key_restart_room = keyboard_check(ord("R"));
+		key_quit_game =  keyboard_check_pressed(vk_escape);
 	}
 }

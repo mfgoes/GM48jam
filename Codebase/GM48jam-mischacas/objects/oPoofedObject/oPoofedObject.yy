@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sCoin",
-    "path": "sprites/sCoin/sCoin.yy",
+    "name": "sDust",
+    "path": "sprites/sDust/sDust.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oPickupParent",
-    "path": "objects/oPickupParent/oPickupParent.yy",
+    "name": "oDust",
+    "path": "objects/oDust/oDust.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,7 +25,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -34,7 +33,7 @@
     "path": "folders/Objects/Environment+Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCoin",
+  "name": "oPoofedObject",
   "tags": [],
   "resourceType": "GMObject",
 }

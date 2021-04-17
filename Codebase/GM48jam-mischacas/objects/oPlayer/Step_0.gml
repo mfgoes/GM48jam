@@ -9,5 +9,4 @@ script_execute(state);
 //Collisions 
 PlayerCollision();
 
-
-
+PlayerDebugControls(); 

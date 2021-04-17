@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "PlayerScripts",
-    "path": "folders/Scripts/PlayerScripts.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerStateFree",
+  "name": "timer_init",
   "tags": [],
   "resourceType": "GMScript",
 }

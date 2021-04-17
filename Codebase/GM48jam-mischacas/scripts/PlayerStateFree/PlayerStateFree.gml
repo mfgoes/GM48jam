@@ -19,3 +19,9 @@ function PlayerStateFree(){
 	
 #endregion
 }
+	
+	
+function PlayerDebugControls(){
+	if (key_restart_room = 1) {room_restart();}
+	if (key_quit_game) {game_end();}
+}
