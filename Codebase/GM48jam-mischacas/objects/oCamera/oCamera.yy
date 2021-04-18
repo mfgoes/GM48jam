@@ -4,7 +4,7 @@
     "path": "sprites/ctrl_cursor/ctrl_cursor.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": true,
   "parentObjectId": null,

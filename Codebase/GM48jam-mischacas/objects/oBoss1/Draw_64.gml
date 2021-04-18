@@ -21,7 +21,9 @@ if global.boss_active = true {
 	draw_set_color(c_white);
 	
 	
-	draw_text(x,y-30,pan_camera);
+	if pan_camera = true {
+		draw_sprite_ext(s_UI_flagfight,0,RESWhalf,200,2,2,0,c_white,1);	
+	}
 }
 
 /*

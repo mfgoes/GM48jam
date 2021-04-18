@@ -1,5 +1,13 @@
 //GMLive
 //if (live_call()) return live_result; 
+if instance_exists(oBoss1) {
+	if oBoss1.pan_camera = 1 {
+		follow = oBoss1;
+	}
+	else if instance_exists(oPlayer) follow = oPlayer;
+	else follow = self;
+}
+
 
 //Upate camera destination
 if (instance_exists(follow)) 

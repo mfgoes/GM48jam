@@ -1,6 +1,6 @@
 /// @description init specific variables
 //gm live 
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 global.kills = 0;
 global.killsthisroom = 0;
 
@@ -17,3 +17,12 @@ global.boss_active = false;
 
 boss_timer = 5; //60 seconds. 
 timer_active = true;
+
+//set cursor
+cursor_sprite = ctrl_cursor;
+window_set_cursor(cr_none);
+
+//transitions
+if !instance_exists(oTransition) {
+	instance_create_depth(0,0,depth,oTransition);
+}
