@@ -24,12 +24,13 @@ function PlayerStateFree(){
 function PlayerDebugControls(){
 	if (key_restart_room = 1) {room_restart();}
 	if (key_quit_game) {game_end();}
+	if (key_debug) {global.debugmode = !(global.debugmode);}
 }
 
 function PlayerShoot() {
 	
 	//GMLive
-	if (live_call()) return live_result; 
+	//if (live_call()) return live_result; 
 
 	timer_init("bullet_load1");
 	timer_init("bullet_load2");
@@ -39,7 +40,7 @@ function PlayerShoot() {
 		if ammo_type1 > 0 {
 			dd = instance_create_depth(x,y,depth,oBullet1);
 			dd.direction = point_direction(x,y,mouse_x,mouse_y);;
-			timer_set("bullet_load1",10);
+			timer_set("bullet_load1",25);
 			ScreenShake(1,2);
 			ammo_type1 -=1; 
 		}

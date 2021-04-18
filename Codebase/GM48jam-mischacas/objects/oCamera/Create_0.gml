@@ -1,11 +1,11 @@
 /// @description Set up Camera
 //GMLive
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 #region set up resolution macros
 	#macro SAVEFILE "Save.sav"
-	#macro RES_W 208
-	#macro RES_H 160
+	#macro RES_W 144
+	#macro RES_H 96
 	#macro RES_SCALE 3 //how much to scale the pixel art
 	#macro RES_SCALE_HUD 3 //how much to scale the pixel art
 	#macro RES_RATIO RES_H/RES_W
@@ -27,6 +27,7 @@ if (live_call()) return live_result;
 	//center window
 	var display_width  = display_get_width();
 	var display_height = display_get_height();
+	key_fullscreen     = keyboard_check_pressed(vk_f1); 
 	
 	window_width = RES_W * RES_SCALE;
 	window_height = RES_H * RES_SCALE;

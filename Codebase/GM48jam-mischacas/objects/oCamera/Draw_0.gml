@@ -7,4 +7,3 @@ targetY = clamp(targetY, 0, room_height - (camH + camDist));
 //GMLive
 //if (live_call()) return live_result; 
 
-draw_self();

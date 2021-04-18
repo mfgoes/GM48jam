@@ -15,5 +15,5 @@ audio_master_gain(global.sound_volume);
 global.game_paused = false;
 global.boss_active = false;
 
-boss_timer = 60; //60 seconds. 
+boss_timer = 15; //60 seconds. 
 timer_active = true;

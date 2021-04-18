@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Setup",
-    "path": "folders/Objects/Setup.yy",
+    "path": "folders/Objects/Enemies/Setup.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTransition",
