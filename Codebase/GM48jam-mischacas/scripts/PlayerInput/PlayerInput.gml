@@ -18,5 +18,6 @@ function PlayerInput(){
 	
 		key_restart_room = keyboard_check(ord("R"));
 		key_quit_game =  keyboard_check_pressed(vk_escape);
+		key_debug		= keyboard_check_pressed(ord("1")); 
 	}
 }

@@ -1,5 +1,5 @@
 //GMLive
-if (live_call()) return live_result; 
+//if (live_call()) return live_result; 
 
 //Upate camera destination
 if (instance_exists(follow)) 

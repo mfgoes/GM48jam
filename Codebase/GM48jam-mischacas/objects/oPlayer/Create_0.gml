@@ -5,7 +5,7 @@
 	current_walkspd = 0;
 	
 	//player stats
-	hp = 1;
+	hp = 3;
 	shields = 0; //ignore this for now
 	upgrades = 0;
 	ammo_type1 = 10;
