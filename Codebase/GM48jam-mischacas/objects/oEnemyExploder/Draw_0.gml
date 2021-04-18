@@ -1,7 +1,7 @@
 /// @description Insert description here
 
 //gm live 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 // Inherit the parent event
 event_inherited();
 

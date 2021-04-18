@@ -11,7 +11,7 @@
 	ammo_type1 = 10;
 	ammo_type2 = 5;
 	
-	walkspd = 3;
+	walkspd = 2;
 	hascontrol = true;
 	
 	speedRoll = 5.0;

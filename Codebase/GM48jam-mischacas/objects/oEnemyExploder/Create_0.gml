@@ -1,11 +1,13 @@
 event_inherited();
 //gm live 
-//if (live_call()) return live_result; 
+if (live_call()) return live_result; 
 
 hp = 2;
 hp_max = hp;
+damage = 1; //how much dmg to do
+walkspd = 1;
 
-sight_range = 70 //randomize later
+sight_range = 45 //randomize later
 shoot_frequency = 150;
 start_shooting = 0;
 alarm[0] = 50+random(100);

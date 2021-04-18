@@ -27,6 +27,7 @@
 	//center window
 	var display_width  = display_get_width();
 	var display_height = display_get_height();
+	key_fullscreen     = keyboard_check_pressed(vk_f1); 
 	
 	window_width = RES_W * RES_SCALE;
 	window_height = RES_H * RES_SCALE;
