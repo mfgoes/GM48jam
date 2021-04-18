@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWall",
+  "name": "oWallTransparent",
   "tags": [],
   "resourceType": "GMObject",
 }
