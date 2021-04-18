@@ -5,7 +5,7 @@ if (live_call()) return live_result;
 hp = 2;
 hp_max = hp;
 damage = 1; //how much dmg to do
-walkspd = 1;
+walkspd = 0.7+random(0.5); randomize();
 
 sight_range = 45 //randomize later
 shoot_frequency = 150;

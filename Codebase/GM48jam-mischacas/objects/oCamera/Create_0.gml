@@ -4,8 +4,8 @@
 
 #region set up resolution macros
 	#macro SAVEFILE "Save.sav"
-	#macro RES_W 144
-	#macro RES_H 96
+	#macro RES_W 176 // 144
+	#macro RES_H 128 //96
 	#macro RES_SCALE 3 //how much to scale the pixel art
 	#macro RES_SCALE_HUD 3 //how much to scale the pixel art
 	#macro RES_RATIO RES_H/RES_W
