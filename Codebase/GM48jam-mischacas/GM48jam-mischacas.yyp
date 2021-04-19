@@ -15,9 +15,11 @@
     {"id":{"name":"KillPlayer","path":"scripts/KillPlayer/KillPlayer.yy",},"order":0,},
     {"id":{"name":"s_UI_flagprepare","path":"sprites/s_UI_flagprepare/s_UI_flagprepare.yy",},"order":0,},
     {"id":{"name":"sEnemy1_Idle","path":"sprites/sEnemy1_Idle/sEnemy1_Idle.yy",},"order":1,},
+    {"id":{"name":"BackgroundTileset","path":"sprites/BackgroundTileset/BackgroundTileset.yy",},"order":9,},
     {"id":{"name":"sBgrDefault","path":"sprites/sBgrDefault/sBgrDefault.yy",},"order":3,},
     {"id":{"name":"sAmmo2","path":"sprites/sAmmo2/sAmmo2.yy",},"order":0,},
     {"id":{"name":"ctrl_system","path":"sprites/ctrl_system/ctrl_system.yy",},"order":10,},
+    {"id":{"name":"BackgroundTiles","path":"tilesets/BackgroundTiles/BackgroundTiles.yy",},"order":0,},
     {"id":{"name":"sHitSpark","path":"sprites/sHitSpark/sHitSpark.yy",},"order":0,},
     {"id":{"name":"oBullet2","path":"objects/oBullet2/oBullet2.yy",},"order":3,},
     {"id":{"name":"s_1HP","path":"sprites/s_1HP/s_1HP.yy",},"order":3,},
@@ -31,6 +33,7 @@
     {"id":{"name":"oPlayerDead","path":"objects/oPlayerDead/oPlayerDead.yy",},"order":1,},
     {"id":{"name":"oEnemyExploder","path":"objects/oEnemyExploder/oEnemyExploder.yy",},"order":2,},
     {"id":{"name":"s_ammo_icons","path":"sprites/s_ammo_icons/s_ammo_icons.yy",},"order":4,},
+    {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},"order":1,},
     {"id":{"name":"oBossEnemyParent","path":"objects/oBossEnemyParent/oBossEnemyParent.yy",},"order":0,},
     {"id":{"name":"oEnemy1","path":"objects/oEnemy1/oEnemy1.yy",},"order":1,},
     {"id":{"name":"PlayerCollision","path":"scripts/PlayerCollision/PlayerCollision.yy",},"order":2,},
@@ -81,6 +84,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
