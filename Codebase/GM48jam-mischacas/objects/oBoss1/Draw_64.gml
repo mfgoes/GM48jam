@@ -22,7 +22,7 @@ if global.boss_active = true {
 	
 	
 	if pan_camera = true {
-		draw_sprite_ext(s_UI_flagfight,0,RESWhalf,200,2,2,0,c_white,1);	
+		draw_sprite_ext(s_UI_flagfight,0,RESWhalf,40,2,2,0,c_white,1);	
 	}
 }
 

@@ -5,7 +5,7 @@ function PlayerStateFree(){
 	
 	//Slow down while shooting
 	var slowwalk = 0.5; 
-	current_walkspd = 3;
+	current_walkspd = walkspd;
 	if current_weapon != 0 && mouse_check_button(mb_left) = true {
 	slowwalk = 0.5;
 	} else slowwalk = 1;
@@ -39,9 +39,9 @@ function PlayerShoot() {
 	if (key_primary) && timer_get("bullet_load1") <= 0 {
 		if ammo_type1 > 0 {
 			dd = instance_create_depth(x,y,depth,oBullet1);
-			dd.direction = point_direction(x,y,mouse_x,mouse_y);;
-			timer_set("bullet_load1",25);
-			ScreenShake(1,2);
+			dd.direction = point_direction(x,y,mouse_x,mouse_y)+random_range(-5,5);
+			timer_set("bullet_load1",28);
+			//ScreenShake(1,2);
 			ammo_type1 -=1; 
 		}
 	}
@@ -53,14 +53,35 @@ function PlayerShoot() {
 			dd.direction = point_direction(x,y,mouse_x,mouse_y);		
 			
 			ee = instance_create_depth(x,y,depth,oBullet2);
-			ee.direction = point_direction(x,y,mouse_x,mouse_y)+20;	
+			ee.direction = point_direction(x,y,mouse_x,mouse_y)+20+random(5);	
 			
 			ff = instance_create_depth(x,y,depth,oBullet2);
-			ff.direction = point_direction(x,y,mouse_x,mouse_y)-20;	
+			ff.direction = point_direction(x,y,mouse_x,mouse_y)-20-random(5);	
 			
 			timer_set("bullet_load2",40);
-			ScreenShake(2,4);
+			ScreenShake(1,1);
 			ammo_type2 -=1; 
 		}
 	}
+}
+	
+	
+function PlayerAnimations() {
+	//movement vars
+	var move_hor = key_right - key_left;
+	var move_ver = key_down - key_up; 
+	var mouse_direction = point_direction(x,y,mouse_x,mouse_y); //gamepad support later
+	
+	//if standing still
+	if (move_hor = 0 && move_ver = 0) {
+		if mouse_direction < 90 or mouse_direction >= 270 {image_xscale = -1} else {image_xscale = 1}
+		sprite_index = sMain_Character_left;
+	}
+	else {
+		sprite_index = sMain_Character_walk;
+		if move_hor < 0 image_xscale = 1 else image_xscale = -1;
+	}
+	
+	//speed is consistent
+	image_speed = 1;
 }

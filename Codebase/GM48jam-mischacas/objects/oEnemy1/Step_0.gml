@@ -10,8 +10,8 @@ if instance_exists(oPlayer) && start_shooting = 1 {
 	if timer_get("shoot") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
 		timer_set("shoot",shoot_frequency+random(25));
 		dd = instance_create_depth(x,y,depth-1,oEbullet);
-		dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+random_range(-10,10);
-		dd.spd = 2;
+		dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+random_range(-30,30);
+		dd.spd = random_range(1,1.5);
 	}
 }
 else exit;

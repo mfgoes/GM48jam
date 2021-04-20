@@ -12,3 +12,6 @@ PlayerCollision();
 PlayerDebugControls(); 
 
 PlayerShoot();
+
+//Animations
+PlayerAnimations();

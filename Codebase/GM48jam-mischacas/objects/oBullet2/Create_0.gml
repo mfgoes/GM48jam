@@ -1,3 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-spd = 7;
+/// @description stronger shotgun bullet. 
+// This bullet is stronger, slower, and has less range
+spd = 6;

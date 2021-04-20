@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sAmmo2",
-    "path": "sprites/sAmmo2/sAmmo2.yy",
+    "name": "sAmmo_box_02",
+    "path": "sprites/sAmmo_box_02/sAmmo_box_02.yy",
   },
   "solid": false,
   "visible": true,

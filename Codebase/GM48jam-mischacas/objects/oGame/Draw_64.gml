@@ -17,5 +17,8 @@ if instance_exists(oPlayer) {
 	draw_text(15, RES_H*RES_SCALE_HUD-70,"ammo2 : " + string(oPlayer.ammo_type2));
 	draw_set_halign(fa_right);
 	draw_text(RES_W*RES_SCALE_HUD-15, RES_H*RES_SCALE_HUD-70,"keys : " + string(oPlayer.coins));
+	
+	//debug
+	//draw_text(60,80, point_direction(oPlayer.x,oPlayer.y,mouse_x,mouse_y));
 }
 else exit;

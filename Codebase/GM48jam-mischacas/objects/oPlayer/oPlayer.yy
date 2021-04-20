@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "sPlayerIdle",
-    "path": "sprites/sPlayerIdle/sPlayerIdle.yy",
+    "name": "sMain_Character_down",
+    "path": "sprites/sMain_Character_down/sMain_Character_down.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sPlayerMask",
+    "path": "sprites/sPlayerMask/sPlayerMask.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

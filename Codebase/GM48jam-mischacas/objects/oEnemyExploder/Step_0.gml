@@ -6,7 +6,7 @@ if (live_call()) return live_result;
 timer_init("move_random"); //move around randomly (mainly move towards player
 
 if instance_exists(oPlayer) {
-	if distance_to_object(oPlayer) <=sight_range {
+	if distance_to_object(oPlayer) <=sight_range && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0) {
 		//move towards player	
 		
 		var dir = point_direction(x,y,oPlayer.x,oPlayer.y);
@@ -33,7 +33,11 @@ if instance_exists(oPlayer) {
 			}
 			vsp = 0;
 		}
-		y = y + vsp;				
+		y = y + vsp;		
+		image_speed = 0.3;
+} 
+else { //else stand still
+	image_speed = 0;
 }
 
 	//explode on contact

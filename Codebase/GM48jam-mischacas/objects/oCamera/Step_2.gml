@@ -1,13 +1,19 @@
 //GMLive
 //if (live_call()) return live_result; 
+
+//Boss camera shift
 if instance_exists(oBoss1) {
 	if oBoss1.pan_camera = 1 {
 		follow = oBoss1;
+		cam_speed = 14;
+		//slow camera here
 	}
-	else if instance_exists(oPlayer) follow = oPlayer;
+	else if instance_exists(oPlayer) {
+		follow = oPlayer; cam_speed = 4;
+	}
 	else follow = self;
 }
-
+else follow = self;
 
 //Upate camera destination
 if (instance_exists(follow)) 

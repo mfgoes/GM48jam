@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBullet1",
-    "path": "sprites/sBullet1/sBullet1.yy",
+    "name": "Projectile_Fireball",
+    "path": "sprites/Projectile_Fireball/Projectile_Fireball.yy",
   },
   "solid": false,
   "visible": true,

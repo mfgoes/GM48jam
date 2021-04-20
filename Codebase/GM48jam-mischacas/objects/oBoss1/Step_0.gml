@@ -9,7 +9,7 @@ timer_init("boss_camera");
 
 if cam_pan_off = false {
 	if summoned = true && alarm[0] = -1 && pan_camera = false {
-		alarm[0] = 50;
+		alarm[0] = 100;
 		pan_camera = true;
 	}
 }

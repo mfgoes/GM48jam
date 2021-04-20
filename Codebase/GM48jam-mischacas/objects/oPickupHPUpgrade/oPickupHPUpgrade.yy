@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sHealthPickup",
-    "path": "sprites/sHealthPickup/sHealthPickup.yy",
+    "name": "sPot_healthUp",
+    "path": "sprites/sPot_healthUp/sPot_healthUp.yy",
   },
   "solid": false,
   "visible": true,

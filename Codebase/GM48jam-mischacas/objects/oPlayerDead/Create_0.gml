@@ -9,8 +9,7 @@ image_speed = 0;
 //sprite_index = sPlayerDie;
 //generate poof here
 
-ScreenShake(3,50);
-audio_play_sound(snDeath,10,false);
+ScreenShake(2,10);
 game_set_speed(40,gamespeed_fps);
 
 with(oCamera) follow = other.id;

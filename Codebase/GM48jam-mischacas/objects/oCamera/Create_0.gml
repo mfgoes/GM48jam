@@ -52,7 +52,7 @@ if (instance_exists(follow)) {
 }
 alarm[0] = 30; //replace with timer later
 
-cam_speed = 4; //higher = =slower
+cam_speed = 4; //higher = slower
 zoom_speed = 0.5; //higher is faster?
 start_zoom = 0.05; //zoom level at start of level
 zoom = 0.55; //zoom level adjusted through scroll

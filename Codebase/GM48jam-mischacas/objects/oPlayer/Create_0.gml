@@ -8,14 +8,12 @@
 	hp = 3; hp_max = hp;
 	shields = 0; //ignore this for now
 	upgrades = 0;
-	ammo_type1 = 10;
+	ammo_type1 = 15;
 	ammo_type2 = 5;
 	
-	walkspd = 2;
+	walkspd = 1.5;
 	hascontrol = true;
 	
-	speedRoll = 5.0;
-	distanceRoll = 170;
 	facing_direction = 0; //the last walked in direction
 		
 	//weapon stuff

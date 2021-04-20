@@ -2,6 +2,8 @@ event_inherited();
 //gm live 
 //if (live_call()) return live_result; 
 
+image_speed = 0;//no movement
+
 hp = 2;
 hp_max = hp;
 

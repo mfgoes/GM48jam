@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_boss_Slime_awake",
-    "path": "sprites/s_boss_Slime_awake/s_boss_Slime_awake.yy",
+    "name": "s_boss_Slime_sleep",
+    "path": "sprites/s_boss_Slime_sleep/s_boss_Slime_sleep.yy",
   },
   "solid": false,
   "visible": true,

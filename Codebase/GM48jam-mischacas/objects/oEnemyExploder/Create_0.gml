@@ -7,11 +7,11 @@ hp_max = hp;
 damage = 1; //how much dmg to do
 walkspd = 0.7+random(0.5); randomize();
 
-sight_range = 45 //randomize later
+sight_range = 75 //randomize later
 shoot_frequency = 150;
 start_shooting = 0;
 alarm[0] = 50+random(100);
-
+image_speed = 0;
 /*enum enemy_states { 
   patrol,
   approach,

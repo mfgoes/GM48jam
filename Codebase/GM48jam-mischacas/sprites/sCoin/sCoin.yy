@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Items",
-    "path": "folders/Sprites/Items.yy",
+    "name": "Placeholders",
+    "path": "folders/Sprites/Items/Placeholders.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCoin",

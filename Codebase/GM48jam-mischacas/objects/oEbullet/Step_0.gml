@@ -2,6 +2,18 @@
 x+= lengthdir_x(spd,direction);
 y+= lengthdir_y(spd,direction);
 
+//limit range
+timer_init("range");
+if timer_get("range") <= 0 {
+	timer_set("range",range_bullet);
+}
+if timer_get("range") = 1 {
+	instance_destroy(); 
+	instance_create_depth(x,y,depth,oDust);
+	instance_create_depth(x,y,depth,oHitSpark);
+	}
+
+
 
 if collision_wall
 {

@@ -5,6 +5,6 @@ if global.game_paused
 	exit;
 }
 
-if round(image_index) = 4 {
+if round(image_index) = 3 {
 	instance_destroy();
 }
