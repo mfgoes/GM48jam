@@ -13,8 +13,12 @@ image_speed = 0;
 
 hp = 2;
 flash = 0;
-walkspd = 2;
+walkspd = 0.6;
 dmg_amount = 3;
 
 //set boss phases here
 summoned = 0; 
+sprite_summon = s_boss_Slime_angry;
+
+sight_range = 70 //randomize later
+shoot_frequency = 80;

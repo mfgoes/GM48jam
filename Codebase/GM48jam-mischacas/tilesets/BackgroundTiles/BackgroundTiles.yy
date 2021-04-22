@@ -1,8 +1,7 @@
 {
-  "name": "BackgroundTiles",
   "spriteId": {
-    "name": "BackgroundTileset",
-    "path": "sprites/BackgroundTileset/BackgroundTileset.yy",
+    "name": "sBackgroundTileset",
+    "path": "sprites/sBackgroundTileset/sBackgroundTileset.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -209,6 +208,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "BackgroundTiles",
   "tags": [],
   "resourceType": "GMTileSet",
 }

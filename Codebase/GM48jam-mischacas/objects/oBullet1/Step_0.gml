@@ -12,6 +12,7 @@ if (place_meeting(x,y,pShootable))
 		hitfrom = other.direction;
 	}
 	instance_destroy();
+	instance_create_depth(x,y,depth,oHitSpark);
 }
 
 //hit a wall

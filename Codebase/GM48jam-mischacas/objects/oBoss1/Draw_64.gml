@@ -4,8 +4,10 @@
 if (live_call()) return live_result; 
 
 var percentagehp = (hp / hp_max)*200; // 0/0 = -5 1/2 = 5;  2/2 = 10;
+var percentfull = 200;
+
 var RESWhalf = RES_W*RES_SCALE_HUD / 2;
-var stroke_width = 5;
+var stroke_width = 2;
 
 var bluebgr = make_colour_rgb(13, 43, 69);
 var orange2 = make_colour_rgb(255, 170, 94);
@@ -14,15 +16,16 @@ var orange2 = make_colour_rgb(255, 170, 94);
 if global.boss_active = true {
 	//draw health bar
 	draw_set_color(bluebgr); 
-	draw_rectangle(RESWhalf-100-stroke_width,20-stroke_width,RESWhalf+percentagehp-100+stroke_width,45+stroke_width,0);
+	draw_rectangle(RESWhalf-100-stroke_width,20-stroke_width,RESWhalf+percentfull-100+stroke_width,45+stroke_width,0);
 	
 	draw_set_color(orange2); 
 	draw_rectangle(RESWhalf-100,20,RESWhalf+percentagehp-100,45,0);
+	draw_text(RESWhalf-120,50,wave);
 	draw_set_color(c_white);
 	
 	
 	if pan_camera = true {
-		draw_sprite_ext(s_UI_flagfight,0,RESWhalf,40,2,2,0,c_white,1);	
+		draw_sprite_ext(s_UI_flagfight,0,RESWhalf+random_range(-1,1),40+random_range(-1,1),2,2,0,c_white,1);	
 	}
 }
 

@@ -42,6 +42,7 @@ if (place_meeting(x,y,oPlayer))
 		
 		if hp < 1 KillPlayer();
 	}
+	instance_create_depth(x,y,depth,oHitSpark);
 	instance_destroy();
 }
 

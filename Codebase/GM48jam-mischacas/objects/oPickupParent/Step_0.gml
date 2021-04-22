@@ -2,7 +2,8 @@
 // You can write your code in this editor
 // You can write your code in this editor
 if (place_meeting(x,y, oPlayer)) {
-	ScreenShake(1,3);
+	//ScreenShake(1,3);
+	//Play sound effect
 	repeat(3)	//create dust effect
 	{
 		//dust particles

@@ -23,7 +23,7 @@
 	flash = 0; 
 	
 	//items 
-	coins = 0;
+	keys = 0;
 		
 	//misc
 	gamepad_on = false;

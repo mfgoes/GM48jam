@@ -20,4 +20,5 @@ if boss_timer = 0 && timer_active = true { //
 	with (oPickupParent) instance_change(oPoofedObject,1);
 	
 	//init screenshake, etc. 
+	ScreenShake(1,20);
 }
