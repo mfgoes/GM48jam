@@ -4,6 +4,7 @@
 if (place_meeting(x,y, oPlayer)) {
 	//ScreenShake(1,3);
 	//Play sound effect
+	audio_play_sound(sn_holster,3,0);
 	repeat(3)	//create dust effect
 	{
 		//dust particles

@@ -15,12 +15,13 @@ audio_master_gain(global.sound_volume);
 global.game_paused = false;
 global.boss_active = false;
 
-boss_timer = 1; //60 seconds. 
+boss_timer = 4; //60 seconds. 
 timer_active = true;
 
 //set cursor
 cursor_sprite = ctrl_cursor;
 window_set_cursor(cr_none);
+level_complete = false; //change this when transitioning to levels
 
 //transitions
 if !instance_exists(oTransition) {

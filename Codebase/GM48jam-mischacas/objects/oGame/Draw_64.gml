@@ -4,6 +4,9 @@
 if (live_call()) return live_result; 
 
 if instance_exists(oPlayer) {
+	var orange2 = make_colour_rgb(255, 170, 94);
+	draw_set_color(orange2);
+
 	draw_set_font(fSign);
 	draw_set_halign(fa_left);
 	
@@ -12,7 +15,7 @@ if instance_exists(oPlayer) {
 	draw_text(15,35,"boss countdown " + string(boss_timer)); 
 	} //else draw in boss draw event
 	
-	draw_text(15, 70,"hp: " + string(oPlayer.hp)+ "/"+string(oPlayer.hp_max)); 
+	//draw_text(15, 70,"hp: " + string(oPlayer.hp)+ "/"+string(oPlayer.hp_max)); 
 	draw_text(15, RES_H*RES_SCALE_HUD-100,"ammo1 : " + string(oPlayer.ammo_type1)); 
 	draw_text(15, RES_H*RES_SCALE_HUD-70,"ammo2 : " + string(oPlayer.ammo_type2));
 	draw_set_halign(fa_right);

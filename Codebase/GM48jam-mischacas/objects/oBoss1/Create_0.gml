@@ -8,7 +8,7 @@ wave = 1; //1 = regular attack. 2 = spawn + shoot. 3 = walk to player slowly (wh
 pan_camera = false;
 cam_pan_off = false;
 
-image_speed = 0.4;
+image_speed = 0.2;
 
 walkspd = 0.6;
 dmg_amount = 3;

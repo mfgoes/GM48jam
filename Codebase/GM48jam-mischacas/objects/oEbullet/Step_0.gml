@@ -44,6 +44,10 @@ if (place_meeting(x,y,oPlayer))
 	}
 	instance_create_depth(x,y,depth,oHitSpark);
 	instance_destroy();
+	//sfx
+	audio_sound_pitch(snd_bulletHit,1.4);
+	audio_sound_gain(snd_bulletHit,0.4,0);
+	audio_play_sound(snd_bulletHit,0,0);
 }
 
 if destroy_self

@@ -5,6 +5,7 @@ y+= lengthdir_y(spd,direction);
 image_angle = direction;
 if (place_meeting(x,y,pShootable))
 {
+	audio_play_sound(snd_bulletHit,3,0);
 	with(instance_place(x,y,pShootable))
 	{
 		hp--;
@@ -13,6 +14,8 @@ if (place_meeting(x,y,pShootable))
 	}
 	instance_destroy();
 	instance_create_depth(x,y,depth,oHitSpark);
+	
+	
 }
 
 //hit a wall

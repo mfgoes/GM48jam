@@ -14,6 +14,7 @@ if timer_get("range") = 1 {instance_destroy(); instance_create_depth(x,y,depth,o
 #region collisions
 if (place_meeting(x,y,pShootable))
 	{
+		audio_play_sound(snd_bulletHit,3,0);
 		with(instance_place(x,y,pShootable))
 		{
 			hp-=2; //double damage

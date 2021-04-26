@@ -8,7 +8,10 @@ event_inherited();
 timer_init("boss_camera");
 //shoot at player 
 timer_init("shoot");
+timer_init("shoot360");
+timer_init("shoot360B");
 timer_init("start_shooting");
+var shoot_angle = 0;
 
 #region camera + effects
 	if cam_pan_off = false {
@@ -20,7 +23,7 @@ timer_init("start_shooting");
 #endregion
 	
 #region attack types
-if (summoned = true) {
+if (summoned = true) && instance_exists(oPlayer) {
 
 //animation
 if oPlayer.x < x image_xscale = 1; else image_xscale = -1; 
@@ -28,7 +31,6 @@ if oPlayer.x < x image_xscale = 1; else image_xscale = -1;
 //take damage
 if (hp <= 0) {
 	ScreenShake(2,30);
-	//play sound
 	repeat(5)	//create dust effect
 	{
 		//dust particles
@@ -42,9 +44,10 @@ if (hp <= 0) {
 		dd.image_xscale = 3; dd.image_yscale = 3;
 	}
 	instance_destroy();
+	audio_play_sound(snd_enemy_exploding,0,0);
+	oGame.level_complete = true;
 }
-	
-}
+image_alpha = 1;	
 
 //do damage
 switch (wave){
@@ -56,6 +59,7 @@ switch (wave){
 			dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
 			dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+random_range(-25,25);
 			dd.spd = random_range(1.2,1.8);
+			audio_play_sound(snMissile1,0,0);
 			}
 		}
 	else exit;
@@ -63,23 +67,75 @@ switch (wave){
 	break;
 	case 2: //attack and follow
 	{
+		if instance_exists(oPlayer) { //&& start_shooting = 1
+		if timer_get("shoot360") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
+			timer_set("shoot360",shoot_frequency*2+random(45));
+			audio_sound_pitch(snMissile1,0.8);
+			audio_play_sound(snMissile1,0,0);
+			ScreenShake(3,3);
+			
+			repeat(8) {
+				shoot_angle+=45; 
+				dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
+				dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+shoot_angle;
+				dd.spd = random_range(1.2,1.8);
+			}
+			}
+		if timer_get("shoot") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
+			timer_set("shoot",shoot_frequency+30+random(25));
+			dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
+			dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+random_range(-25,25);
+			dd.spd = random_range(1.2,1.8);
+			audio_sound_pitch(snMissile1,1);
+			audio_play_sound(snMissile1,0,0);
+			}
+		}
 		
 	}
 	break;
 	case 3: //attack, follow and spawn enemies
 	{
+		if instance_exists(oPlayer) { //&& start_shooting = 1
+		if timer_get("shoot360") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
+			timer_set("shoot360",shoot_frequency*3);
+			audio_sound_pitch(snMissile1,0.8);
+			audio_play_sound(snMissile1,0,0);
+			
+			repeat(16) {
+				shoot_angle+=45/2; 
+				dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
+				dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+shoot_angle;
+				dd.spd = random_range(1.3,2);
+			}
+		}
 		
+		//easy circle attack
+		if timer_get("shoot360B") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
+			timer_set("shoot360B",shoot_frequency*4);
+			audio_sound_pitch(snMissile1,0.8);
+			audio_play_sound(snMissile1,0,0);
+			
+			repeat(8) {
+				shoot_angle+=45; 
+				dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
+				dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+shoot_angle;
+				dd.spd = random_range(1,1.2);
+			}
+		}
+		
+		
+		if timer_get("shoot") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
+			timer_set("shoot",shoot_frequency+random(5));
+			dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
+			dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+random_range(-25,25);
+			dd.spd = random_range(1.2,1.8);
+			audio_sound_pitch(snMissile1,1);
+			audio_play_sound(snMissile1,0,0);
+			}
+		}	
 	}
 	break;
 }
-
-//set attack phase
-var percentagehp = (hp / hp_max)*100;
-if percentagehp < 40 wave = 3;
-else if percentagehp < 80  wave = 2;
-else wave = 1;
-
-#endregion
 
 #region move towards player 
 
@@ -119,3 +175,16 @@ else wave = 1;
 	}
 	}
 #endregion
+
+//set attack phase
+var percentagehp = (hp / hp_max)*100;
+if percentagehp < 40 wave = 3;
+else if percentagehp < 80  wave = 2;
+else wave = 1;
+
+}
+else 
+image_alpha = 0.3; //make it clear that you can't attack it yet. 
+
+#endregion
+

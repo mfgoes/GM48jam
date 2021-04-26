@@ -22,3 +22,7 @@ if boss_timer = 0 && timer_active = true { //
 	//init screenshake, etc. 
 	ScreenShake(1,20);
 }
+
+if level_complete = true {
+	if alarm[0] <= 0 alarm[0] = 140;
+}
