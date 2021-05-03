@@ -17,3 +17,4 @@ dmg_amount = 3;
 sprite_summon = s_boss_Slime_angry;
 sight_range = 100 //randomize later
 shoot_frequency = 80;
+load_boss = 0;

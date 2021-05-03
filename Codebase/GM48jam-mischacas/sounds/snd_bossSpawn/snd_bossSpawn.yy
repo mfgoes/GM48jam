@@ -13,8 +13,8 @@
   "soundFile": "snd_bossSpawn.wav",
   "duration": 2.164184,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "missile variations",
+    "path": "folders/Sounds/weapons/missile variations.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_bossSpawn",

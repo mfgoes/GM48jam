@@ -11,19 +11,31 @@ timer_init("shoot");
 timer_init("shoot360");
 timer_init("shoot360B");
 timer_init("start_shooting");
+timer_init("load_boss");
 var shoot_angle = 0;
 
 #region camera + effects
 	if cam_pan_off = false {
 		if summoned = true && alarm[0] = -1 && pan_camera = false {
-			alarm[0] = 100;
+			alarm[0] = 70;
 			pan_camera = true;
 		}
 	}
 #endregion
+
+if (summoned = true) && load_boss = 0 { //take small break before attacking
+	if timer_get("load_boss") <= 0 {
+		timer_set("load_boss",100);
+	}
+	if timer_get("load_boss") = 1 {
+		load_boss = 1;
+	}
+}
 	
 #region attack types
-if (summoned = true) && instance_exists(oPlayer) {
+if (summoned = true) && instance_exists(oPlayer) && load_boss = 1 {
+
+
 
 //animation
 if oPlayer.x < x image_xscale = 1; else image_xscale = -1; 
@@ -59,7 +71,8 @@ switch (wave){
 			dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
 			dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+random_range(-25,25);
 			dd.spd = random_range(1.2,1.8);
-			audio_play_sound(snMissile1,0,0);
+			audio_sound_gain(snBossBullet1,0.3,0);
+			audio_play_sound(snBossBullet1,0,0);
 			}
 		}
 	else exit;
@@ -70,15 +83,16 @@ switch (wave){
 		if instance_exists(oPlayer) { //&& start_shooting = 1
 		if timer_get("shoot360") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
 			timer_set("shoot360",shoot_frequency*2+random(45));
-			audio_sound_pitch(snMissile1,0.8);
-			audio_play_sound(snMissile1,0,0);
+			audio_sound_gain(snMissile1,0.4,0); audio_sound_gain(snMissile2,0.4,0);
+			audio_play_sound(choose(snMissile1,snMissile2),0,0);
 			ScreenShake(3,3);
 			
 			repeat(8) {
 				shoot_angle+=45; 
-				dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
+				dd = instance_create_depth(x,y,depth-1,oEbulletFollowGhost);
 				dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+shoot_angle;
 				dd.spd = random_range(1.2,1.8);
+				ScreenShake(3,10);
 			}
 			}
 		if timer_get("shoot") <= 0 && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0){
@@ -86,8 +100,9 @@ switch (wave){
 			dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
 			dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+random_range(-25,25);
 			dd.spd = random_range(1.2,1.8);
-			audio_sound_pitch(snMissile1,1);
-			audio_play_sound(snMissile1,0,0);
+			audio_sound_gain(snBossBullet1,0.3,0);
+			audio_play_sound(snBossBullet1,0,0);
+			ScreenShake(1,2);
 			}
 		}
 		
@@ -103,9 +118,10 @@ switch (wave){
 			
 			repeat(16) {
 				shoot_angle+=45/2; 
-				dd = instance_create_depth(x,y,depth-1,oEbulletFollow);
+				dd = instance_create_depth(x,y,depth-1,oEbulletFollowGhost);
 				dd.direction = point_direction(x,y,oPlayer.x,oPlayer.y)+shoot_angle;
 				dd.spd = random_range(1.3,2);
+				ScreenShake(3,10);
 			}
 		}
 		
@@ -131,13 +147,14 @@ switch (wave){
 			dd.spd = random_range(1.2,1.8);
 			audio_sound_pitch(snMissile1,1);
 			audio_play_sound(snMissile1,0,0);
+			ScreenShake(1,2);
 			}
 		}	
 	}
 	break;
 }
 
-#region move towards player 
+#region move towards player (code is slightly broken. fix later)
 
 	if instance_exists(oPlayer) && wave > 1 { //check if should follow player
 		if distance_to_object(oPlayer) <=sight_range && !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0) && distance_to_object(oPlayer) > 2 {

@@ -40,6 +40,7 @@ if collision_wall
 		}
 		spd = 0;
 		instance_change(oHitSpark,true);
+		
 	}
 }
 

@@ -13,6 +13,7 @@ if timer_get("range") = 1 {
 	instance_create_depth(x,y,depth,oHitSpark);
 	}
 
+/*
 if collision_wall
 {
 	if (place_meeting(x,y,oWall)) && (image_index !=0) 
@@ -25,7 +26,7 @@ if collision_wall
 		spd = 0;
 		instance_change(oHitSpark,true);
 	}
-}
+}*/
 
 
 //hit player

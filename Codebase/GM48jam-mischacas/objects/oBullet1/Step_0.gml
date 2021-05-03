@@ -13,6 +13,7 @@ if (place_meeting(x,y,pShootable))
 		hitfrom = other.direction;
 	}
 	instance_destroy();
+	audio_play_sound(snd_bulletHitWall,10,0);
 	instance_create_depth(x,y,depth,oHitSpark);
 	
 	

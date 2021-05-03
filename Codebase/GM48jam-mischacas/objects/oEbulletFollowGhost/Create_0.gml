@@ -7,4 +7,4 @@ destroy_self = false;
 collision_wall = false;
 
 //randomize range
-range_bullet = round(random_range(60,80));
+range_bullet = round(random_range(100,120));
