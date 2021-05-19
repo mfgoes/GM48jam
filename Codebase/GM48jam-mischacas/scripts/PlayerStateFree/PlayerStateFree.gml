@@ -41,11 +41,11 @@ function PlayerShoot() {
 			dd = instance_create_depth(x,y,depth,oBullet1);
 			dd.direction = point_direction(x,y,mouse_x,mouse_y)+random_range(-5,5);
 			timer_set("bullet_load1",28);
-			ScreenShake(1,2);
+			//ScreenShake(1,2);
 			ammo_type1 -=1; 
-			audio_sound_gain(sn_DT,0.4,0);
-			audio_sound_pitch(sn_DT,0.7);
-			audio_play_sound(sn_DT,3,0);
+			audio_sound_gain(snBossBullet1,0.3,0);
+			audio_sound_pitch(snBossBullet1,1);
+			audio_play_sound(snBossBullet1,3,0);
 		}
 	}
 	

@@ -1,3 +1,5 @@
+/// @description simple spider enemy
+
 event_inherited();
 //gm live 
 //if (live_call()) return live_result; 
@@ -8,7 +10,7 @@ hp = 2;
 hp_max = hp;
 
 sight_range = 70 //randomize later
-shoot_frequency = 150;
+shoot_frequency = 160+choose(0,20,30);
 start_shooting = 0;
 alarm[0] = 50+random(100);
 
@@ -22,6 +24,8 @@ current_state = enemy_states.patrol;
 //extras
 position_random = random_range(-3,3);
 stunned = 5; //prevents enemy from walking 
+
+direction = choose(0,90,180,270);
 
 /*to do: enemy 1
 -draw state var

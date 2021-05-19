@@ -36,5 +36,5 @@
 
 //Create essential objects
 if !instance_exists(oGame) {
-	instance_create_depth(x,y,depth,oGame);
+	dd = instance_create_depth(x,y,depth,oGame);
 }
